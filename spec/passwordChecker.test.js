@@ -58,11 +58,11 @@ describe("hasDigit", () => {
 
 describe("notContainsIPL", () => {
     it('should return false for passwords containing "IPL" (case insensitive)', () => {
-        expect(isValidPassword("aB1!IPLxyz")).toBe(false);
-        expect(isValidPassword("aB1!iplxyz")).toBe(false);
+        expect(notContainsIPL("aB1!IPLxyz")).toBe(false);
+        expect(notContainsIPL("aB1!iplxyz")).toBe(false);
     });
     
     it('should return true for passwords not containing "IPL" (case insensitive)', () => {
-        expect(isValidPassword("aB1!5165xyz")).toBe(true);
+        expect(notContainsIPL("aB1!5165xyz")).toBe(true);
     });
 });
