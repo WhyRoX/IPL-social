@@ -16,6 +16,11 @@ describe('Password Validation', () => {
     it('should return true for passwords with a special character', () => {
         expect(isValidPassword('aB1!cdef')).toBe(true);
     });
+
+    it('should return false for passwords without a digit', () => {
+        expect(isValidPassword('aBcdef!@')).toBe(false);
+    });
+    
 });
 
 describe('hasSpecialCharacter', () => {
@@ -27,3 +32,4 @@ describe('hasSpecialCharacter', () => {
         expect(hasSpecialCharacter('aB1!cdef')).toBe(true);
     });
 })
+
