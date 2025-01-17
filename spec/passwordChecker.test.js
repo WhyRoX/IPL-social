@@ -24,7 +24,11 @@ describe('Password Validation', () => {
     it('should return true for passwords with at least one digit', () => {
         expect(isValidPassword('aBcdef!@2')).toBe(true);
     });
-    
+
+    it('should return false for passwords containing "IPL" (case insensitive)', () => {
+        expect(isValidPassword('aB1!IPLxyz')).toBe(false);
+        expect(isValidPassword('aB1!iplxyz')).toBe(false);
+      });
 });
 
 describe('hasSpecialCharacter', () => {
