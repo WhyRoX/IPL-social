@@ -8,10 +8,11 @@ function isValidPassword(password) {
     if (!hasSpecialCharacter(password)) {
         return false;
     }
-    const digitPattern = /\d/;
-    if (!digitPattern.test(password)) {
+
+    if (!hasDigit(password)) {
         return false;
     }
+
     return true;
 }
 
@@ -23,6 +24,11 @@ function hasMinLength(password) {
 function hasSpecialCharacter(password) {
     const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
     return specialCharPattern.test(password);
+}
+
+function hasDigit(password) {
+    const digitPattern = /\d/;
+    return digitPattern.test(password);
 }
 
 module.exports = {
