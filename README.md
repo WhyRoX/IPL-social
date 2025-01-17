@@ -5,7 +5,7 @@
 **Email:** enes.yumer@student.vinci.be
 
 ## Project URL
-[GitHub Repository URL](https://github.com/WhyRoX/IPL-social)
+[IPL Social](https://github.com/WhyRoX/IPL-social)
 
 ## Project Description
 This project contains a password validation function written in JavaScript. The function checks if a given password meets the following criteria:
