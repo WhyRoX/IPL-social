@@ -1,21 +1,8 @@
 function isValidPassword(password) {
-    
-
-    if (!hasMinLength(password)) {
-        return false;
-    }
-
-    if (!hasSpecialCharacter(password)) {
-        return false;
-    }
-
-    if (!hasDigit(password)) {
-        return false;
-    }
-
-    if (!notContainsIPL(password)) {
-        return false;
-    }
+    if (!hasMinLength(password)) return false;
+    if (!hasSpecialCharacter(password)) return false;
+    if (!hasDigit(password)) return false;
+    if (!notContainsIPL(password)) return false;
 
     return true;
 }
