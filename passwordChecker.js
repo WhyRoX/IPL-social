@@ -8,7 +8,10 @@ function isValidPassword(password) {
     if (!hasSpecialCharacter(password)) {
         return false;
     }
-    
+    const digitPattern = /\d/;
+    if (!digitPattern.test(password)) {
+        return false;
+    }
     return true;
 }
 

@@ -20,6 +20,10 @@ describe('Password Validation', () => {
     it('should return false for passwords without a digit', () => {
         expect(isValidPassword('aBcdef!@')).toBe(false);
     });
+
+    it('should return true for passwords with at least one digit', () => {
+        expect(isValidPassword('aBcdef!@2')).toBe(true);
+    });
     
 });
 
