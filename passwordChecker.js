@@ -1,10 +1,29 @@
 function isValidPassword(password) {
-    const minLength = 8;
+    
 
-    if (password.length < minLength) {
+    if (!hasMinLength(password)) {
         return false;
     }
+
+    if (!hasSpecialCharacter(password)) {
+        return false;
+    }
+    
     return true;
 }
 
-module.exports = isValidPassword;
+function hasMinLength(password) {
+    const minLength = 8;
+    return password.length >= minLength;
+}
+
+function hasSpecialCharacter(password) {
+    const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+    return specialCharPattern.test(password);
+}
+
+module.exports = {
+    isValidPassword,
+    hasMinLength,
+    hasSpecialCharacter
+};
