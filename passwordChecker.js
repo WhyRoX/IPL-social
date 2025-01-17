@@ -34,5 +34,6 @@ function hasDigit(password) {
 module.exports = {
     isValidPassword,
     hasMinLength,
-    hasSpecialCharacter
+    hasSpecialCharacter,
+    hasDigit
 };
