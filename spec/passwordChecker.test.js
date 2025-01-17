@@ -2,6 +2,7 @@ const {
   isValidPassword,
   hasSpecialCharacter,
   hasDigit,
+  notContainsIPL,
 } = require("../passwordChecker");
 
 describe("Password Validation", () => {
@@ -53,4 +54,15 @@ describe("hasDigit", () => {
   it("should return true for passwords with at least one digit", () => {
     expect(hasDigit("aBcdef!@2")).toBe(true);
   });
+});
+
+describe("notContainsIPL", () => {
+    it('should return false for passwords containing "IPL" (case insensitive)', () => {
+        expect(isValidPassword("aB1!IPLxyz")).toBe(false);
+        expect(isValidPassword("aB1!iplxyz")).toBe(false);
+    });
+    
+    it('should return true for passwords not containing "IPL" (case insensitive)', () => {
+        expect(isValidPassword("aB1!5165xyz")).toBe(true);
+    });
 });

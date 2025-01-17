@@ -44,5 +44,6 @@ module.exports = {
     isValidPassword,
     hasMinLength,
     hasSpecialCharacter,
-    hasDigit
+    hasDigit,
+    notContainsIPL
 };
