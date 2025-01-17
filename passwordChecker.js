@@ -13,11 +13,10 @@ function isValidPassword(password) {
         return false;
     }
 
-    const forbiddenPattern = /ipl/i;
-    if (forbiddenPattern.test(password)) {
-        return false
+    if (!notContainsIPL(password)) {
+        return false;
     }
-    
+
     return true;
 }
 
@@ -34,6 +33,11 @@ function hasSpecialCharacter(password) {
 function hasDigit(password) {
     const digitPattern = /\d/;
     return digitPattern.test(password);
+}
+
+function notContainsIPL(password) {
+    const forbiddenPattern = /ipl/i;
+    return !forbiddenPattern.test(password);
 }
 
 module.exports = {
