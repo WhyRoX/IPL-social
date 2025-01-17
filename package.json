@@ -5,9 +5,13 @@
   "scripts": {
     "test": "jasmine"
   },
-  "author": "",
+  "author": "Yumer Enes <enes.yumer@student.vinci.be>",
   "license": "ISC",
-  "description": "",
+  "description": "A project containing a password validation function with unit tests.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhyRoX/IPL-social.git"
+  },
   "devDependencies": {
     "jasmine": "^5.5.0"
   }
